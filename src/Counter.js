@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react'
 class Counter extends Component {
   state= {
-    value:0,
+    value:undefined,
     title: 'Super Counter'
 }
 
@@ -18,7 +18,11 @@ handleClick = delta => this.setState ({
 })
 
   static getDerivedStateFromProps (nextProps, prevState) {
-    return {value:nextProps.initialValue}
+    return {
+      value: prevState.value === undefined
+      ? nextProps.initialValue
+        : prevState.value
+    }
   }
 
   render() {
