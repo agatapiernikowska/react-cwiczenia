@@ -12,6 +12,7 @@ class NavBar extends Component {
         <p><Link to="/about">About</Link></p>
         <p><Link to="/foo">Foo</Link></p>
         <p><Link to="/magic-number">Magic Number</Link></p>
+        <p><Link to="/tasks">Tasks</Link></p>
       </nav>
     )
   }
