@@ -10,7 +10,11 @@ class App extends Component {
       <div className="App">
 
         <Header/>
-        <AppIntro/>
+        <AppIntro message = "Hello All!"/>
+        <AppIntro message = "Hello FFFFFF!"/>
+        <AppIntro message = {'Hello' + 'XXX!'}/>
+        <AppIntro message = 'Hello ZZZZL!'/>
+        <AppIntro message = {'Hello ZZZZL!'}/>
 
       </div>
     );

@@ -11,7 +11,7 @@ class AppIntro extends React.Component {
   render (){
     return (
       <div style={style}>
-        Hello everyone :)
+        {this.props.message}
       </div>
     )
   }
