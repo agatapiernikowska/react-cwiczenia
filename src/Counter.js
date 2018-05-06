@@ -3,6 +3,15 @@ class Counter extends Component {
   state= {
     value:0
 }
+
+componentDidMount () {
+setTimeout(function() {
+  this.setState({
+    value: 1
+  })
+}.bind(this), 1000)
+}
+
   render() {
     console.log('malujemy Counter!')
     return (
