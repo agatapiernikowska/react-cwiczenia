@@ -7,6 +7,10 @@ class App extends Component {
     appMax: 14
   }
 
+  decrementAppMax = howMuch => this.setState ({
+    appMax: this.state.appMax - howMuch
+  })
+
   handleClick = () => this.setState ({
     appMax: 14
   })
@@ -16,7 +20,7 @@ class App extends Component {
     }),1000)
   }
   render() {
-    const appMax = this.state.appMax
+    const {appMax} = this.state
     return (
       <div>
         <p>Current max is: {appMax}</p>
@@ -24,6 +28,7 @@ class App extends Component {
           reset max
         </button>
         <Counter
+          parentDecrementer={this.decrementAppMax}
           initialValue={3}
           max={14}
           min={1}

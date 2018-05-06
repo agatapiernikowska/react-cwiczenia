@@ -40,6 +40,10 @@ handleClick = delta => this.setState ({
           <button onClick={() => this.handleClick()}>
             Reset
           </button>
+
+          <button onClick={()=> this.props.parentDecrementer(this.state.value)}>
+            Decrement parent
+          </button>
         </p>
       </Fragment>
     )
