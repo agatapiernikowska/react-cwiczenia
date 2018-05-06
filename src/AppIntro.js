@@ -1,10 +1,13 @@
 import React from 'react'
-import './AppIntro.css'
+
+const style = {
+  fontSize: 'large'
+}
 
 class AppIntro extends React.Component {
   render (){
     return (
-      <div className="AppIntro">
+      <div style={style}>
         Hello everyone :)
       </div>
     )
