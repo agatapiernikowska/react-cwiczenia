@@ -16,7 +16,9 @@ setTimeout(() => this.setState({
       <Fragment>
         <h1>{this.state.value}</h1>
         <p>
-          <button>Increment</button>
+          <button onClick={() => this.setState({value: this.state.value +1})}>
+            Increment
+          </button>
         </p>
       </Fragment>
     )
