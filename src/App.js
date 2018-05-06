@@ -3,10 +3,17 @@ import AppIntro from "./AppIntro";
 import './App.css';
 import Header from "./Header";
 
-const bolden = text =>
-  <strong>{text}</strong>
+const bolden = bgColor => text =>  (
+  <strong
+    style={{
+      backgroundColor:bgColor
+    }}>
+    {text}
+  </strong>
+)
 
-const italify = text =>
+
+const italify = () => text =>
   <em>Pepperoni {text} </em>
 
 class App extends Component {
@@ -20,11 +27,11 @@ class App extends Component {
         <AppIntro message = {'Hello' + 'XXX!'}/>
         <AppIntro
           message = 'Hello ZZZZL!'
-          beautify={italify}
+          beautify={italify()}
         />
         <AppIntro
           message = {'Hello ZZZZL!'}
-          beautify = {bolden}
+          beautify = {bolden('red')}
             />
 
       </div>
