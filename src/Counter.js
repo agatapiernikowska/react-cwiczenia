@@ -13,8 +13,12 @@ handleIncrementClick = () => this.setState({
   })
 
   handleResetClick = () => this.setState({
-    value: 0
+    value: this.props.initialValue
   })
+
+  static getDerivedStateFromProps (nextProps, prevState) {
+    return {value:nextProps.initialValue}
+  }
 
   render() {
     return (
@@ -25,10 +29,10 @@ handleIncrementClick = () => this.setState({
             Increment
           </button>
           <button onClick={this.handleDecrementClick}>
-            Increment
+            Decrement
           </button>
           <button onClick={this.handleResetClick}>
-            Increment
+            Reset
           </button>
         </p>
       </Fragment>
@@ -36,5 +40,5 @@ handleIncrementClick = () => this.setState({
   }
 }
 
-
+window.Counter = Counter
 export default Counter

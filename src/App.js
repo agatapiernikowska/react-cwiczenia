@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
 
-        <Counter/>
+        <Counter initialValue={3}/>
 
 
       </div>
