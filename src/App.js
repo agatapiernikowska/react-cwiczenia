@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route
 } from 'react-router-dom'
 import CounterView from './CounterView';
+
 import NavBar from './NavBar'
+import MagicNumber from "./MagicNumber";
 
 class App extends Component {
   render() {
@@ -17,7 +19,9 @@ class App extends Component {
 
         <Route path="/counters" render={() => <CounterView initialMax={10}/>}/>
         <Route path="/about" render={()=> <p>Foo</p>}/>
+        <Route path="/magic-number" component={MagicNumber}/>
       </div>
+
       </Router>
     )
   }

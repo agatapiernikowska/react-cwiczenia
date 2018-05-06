@@ -10,6 +10,8 @@ class NavBar extends Component {
         <p><Link to="/">Home</Link></p>
         <p><Link to="/counters">Counters</Link></p>
         <p><Link to="/about">About</Link></p>
+        <p><Link to="/foo">Foo</Link></p>
+        <p><Link to="/magic-number">Magic Number</Link></p>
       </nav>
     )
   }
