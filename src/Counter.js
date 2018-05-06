@@ -46,5 +46,4 @@ handleClick = delta => this.setState ({
   }
 }
 
-window.Counter = Counter
 export default Counter
