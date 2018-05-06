@@ -5,11 +5,9 @@ class Counter extends Component {
 }
 
 componentDidMount () {
-setTimeout(function() {
-  this.setState({
+setTimeout(() => this.setState({
     value: 1
-  })
-}.bind(this), 1000)
+  }), 1000)
 }
 
   render() {
