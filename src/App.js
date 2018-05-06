@@ -19,7 +19,7 @@ class App extends Component {
 
         <Route path="/counters" render={() => <CounterView initialMax={10}/>}/>
         <Route path="/about" render={()=> <p>Foo</p>}/>
-        <Route path="/magic-number" component={MagicNumber}/>
+        <Route path="/magic-number/:number" component={MagicNumber}/>
       </div>
 
       </Router>
