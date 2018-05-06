@@ -1,13 +1,17 @@
-import React from 'react'
-class Counter extends React.Component {
+import React, {Component, Fragment} from 'react'
+class Counter extends Component {
+  state= {
+    value:0
+}
   render() {
+    console.log('malujemy Counter!')
     return (
-      <React.Fragment>
-        <h1>0</h1>
+      <Fragment>
+        <h1>{this.state.value}</h1>
         <p>
           <button>Increment</button>
         </p>
-      </React.Fragment>
+      </Fragment>
     )
   }
 }

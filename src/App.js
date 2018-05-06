@@ -5,6 +5,7 @@ import Counter from "./Counter";
 
 class App extends Component {
   render() {
+    console.log ('malujemy App')
     return (
       <div>
 
