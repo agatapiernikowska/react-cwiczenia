@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div>
-        <h1>Our awesome app</h1>
+        <Route exact path="/" render={()=> <h1>Our awesome app</h1>}/>
         <nav>
           <p><Link to="/">Home</Link></p>
           <p><Link to="/counters">Counters</Link></p>
