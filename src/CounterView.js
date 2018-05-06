@@ -20,6 +20,10 @@ import Counter from './Counter';
       this.start()
     }
 
+    componentWillUnmount () {
+     this.stop()
+    }
+
     start = () => {
       this.intervalId = setInterval(() => this.setState({
           appMax: this.state.appMax + 1

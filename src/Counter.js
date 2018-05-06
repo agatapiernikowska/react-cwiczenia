@@ -5,6 +5,11 @@ class Counter extends Component {
     title: 'Super Counter'
 }
 
+static defaultProps = {
+    max:10,
+  min:0
+}
+
 handleClick = delta => this.setState ({
   value: delta === undefined
     ? this.props.initialValue
