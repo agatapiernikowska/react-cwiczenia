@@ -5,11 +5,11 @@ class Counter extends Component {
 }
 
 handleIncrementClick = () => this.setState({
-  value: this.state.value + 1
+  value: Math.min(this.state.value + 1,10)
 })
 
   handleDecrementClick = () => this.setState({
-    value: this.state.value - 1
+    value: Math.max(this.state.value - 1,0)
   })
 
   handleResetClick = () => this.setState({
