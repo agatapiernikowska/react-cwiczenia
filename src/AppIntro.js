@@ -1,7 +1,10 @@
 import React from 'react'
+import theme from './theme'
+
 
 const style = {
-  fontSize: 'large'
+  fontSize: 'large',
+  padding:theme.spacing
 }
 
 class AppIntro extends React.Component {
