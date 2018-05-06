@@ -15,7 +15,7 @@ class App extends Component {
       <NavBar/>
 
 
-        <Route path="/counters" component={CounterView}/>
+        <Route path="/counters" render={() => <CounterView initialMax={10}/>}/>
         <Route path="/about" render={()=> <p>Foo</p>}/>
       </div>
       </BrowserRouter>
