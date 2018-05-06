@@ -14,7 +14,10 @@ class App extends Component {
         <AppIntro message = "Hello FFFFFF!"/>
         <AppIntro message = {'Hello' + 'XXX!'}/>
         <AppIntro message = 'Hello ZZZZL!'/>
-        <AppIntro message = {'Hello ZZZZL!'}/>
+        <AppIntro
+          message = {'Hello ZZZZL!'}
+          beautify = {text => <strong>{text}</strong>}
+            />
 
       </div>
     );
