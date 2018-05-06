@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {
   BrowserRouter,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 import CounterView from './CounterView';
+import NavBar from './NavBar'
 
 class App extends Component {
   render() {
@@ -12,11 +12,8 @@ class App extends Component {
       <BrowserRouter>
       <div>
         <Route exact path="/" render={()=> <h1>Our awesome app</h1>}/>
-        <nav>
-          <p><Link to="/">Home</Link></p>
-          <p><Link to="/counters">Counters</Link></p>
-          <p><Link to="/about">About</Link></p>
-        </nav>
+      <NavBar/>
+
 
         <Route path="/counters" component={CounterView}/>
         <Route path="/about" render={()=> <p>Foo</p>}/>
