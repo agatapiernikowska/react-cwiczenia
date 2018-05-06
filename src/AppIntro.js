@@ -1,8 +1,10 @@
 import React from 'react'
+import './AppIntro.css'
+
 class AppIntro extends React.Component {
   render (){
     return (
-      <div className="App-intro">
+      <div className="AppIntro">
         Hello everyone :)
       </div>
     )
