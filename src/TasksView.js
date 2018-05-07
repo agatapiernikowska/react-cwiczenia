@@ -10,6 +10,12 @@ import React, { Component } from 'react'
     event.preventDefault()
     console.log('submit')
   }
+
+  handleChange = event => {
+    this.setState({
+      taskName: event.target.value
+    })
+  }
     render() {
           return (
             <div>
@@ -17,6 +23,7 @@ import React, { Component } from 'react'
               <form onSubmit={this.handleSubmit}>
                 <input
                   value={this.state.taskName}
+                  onChange={this.handleChange}
                 />
                 <button>Add</button>
               </form>
