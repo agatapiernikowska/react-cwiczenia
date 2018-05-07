@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
   class TasksView extends Component {
+
+  handleSubmit  = event => {
+    event.preventDefault()
+    console.log('submit')
+  }
     render() {
           return (
             <div>
               <h1>Tasks</h1>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <input/>
                 <button>Add</button>
               </form>
