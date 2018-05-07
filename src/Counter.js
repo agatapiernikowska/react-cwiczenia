@@ -22,7 +22,49 @@ handleClick = delta => this.setState ({
     )
 })
 
+    // DEAD
+    getInitialState() {
+    console.log('Get Initial State');
+  }
+
+    // DEPRECATED (ALMOST DEAD)
+      componentWillMount() {
+      console.log('Component Will Mount')
+    }
+
+    // DEPRECATED
+      getDefaultProps() {
+      console.log('Get Default Props')
+    }
+
+    componentDidMount() {
+      console.log('Component Did Mount')
+    }
+
+    componentWillReceiveProps() {
+      console.log('Component Will Receive Props')
+   }
+
+    shouldComponentUpdate() {
+      console.log('Should Component Update')
+      return true
+    }
+
+    componentWillUpdate() {
+      console.log('Component Will Update')
+   }
+
+    componentDidUpdate() {
+      console.log('Component Did Update')
+    }
+
+    componentWillUnmount() {
+      console.log('Component Will Unmount')
+    }
+
+
   static getDerivedStateFromProps (nextProps, prevState) {
+    console.log('Get Derived State From Props')
     return {
       value: prevState.value === undefined
       ? nextProps.initialValue
@@ -31,6 +73,7 @@ handleClick = delta => this.setState ({
   }
 
   render() {
+    console.log('Render')
     return (
       <Fragment>
         <h1>{this.state.value}</h1>

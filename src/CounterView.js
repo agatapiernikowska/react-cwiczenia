@@ -17,7 +17,7 @@ import Counter from './Counter';
   })
 
     componentDidMount() {
-      this.start()
+    //  this.start()
     }
 
     componentWillUnmount () {
@@ -58,8 +58,6 @@ import Counter from './Counter';
               <Counter
                 parentDecrementer={this.decrementAppMax}
                 initialValue={3}
-                max={appMax}
-                min={1}
                 step={2}
               />
       </div>
