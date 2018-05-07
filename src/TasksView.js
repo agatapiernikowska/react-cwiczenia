@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
   class TasksView extends Component {
 
+  state = {
+    taskName: 'zupa'
+  }
+
   handleSubmit  = event => {
     event.preventDefault()
     console.log('submit')
@@ -11,7 +15,9 @@ import React, { Component } from 'react'
             <div>
               <h1>Tasks</h1>
               <form onSubmit={this.handleSubmit}>
-                <input/>
+                <input
+                  value={this.state.taskName}
+                />
                 <button>Add</button>
               </form>
               <ul>
