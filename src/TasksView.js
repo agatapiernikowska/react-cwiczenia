@@ -17,6 +17,12 @@ import React, { Component } from 'react'
       taskName: event.target.value
     })
   }
+
+  handleTaskDescriptionChange  = event => {
+    this.setState ({
+      taskDescription: event.target.value
+    })
+  }
     render() {
           return (
             <div>
@@ -28,6 +34,7 @@ import React, { Component } from 'react'
                 />
                 <input
                   value={this.state.taskDescription}
+                  onChange={this.handleTaskDescriptionChange}
                 />
                 <button>Add</button>
               </form>
