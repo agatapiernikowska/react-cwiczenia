@@ -3,7 +3,8 @@ import React, { Component } from 'react'
   class TasksView extends Component {
 
   state = {
-    taskName: 'zupa'
+    taskName: 'zupa',
+    taskDescription: 'foo'
   }
 
   handleSubmit  = event => {
@@ -24,6 +25,9 @@ import React, { Component } from 'react'
                 <input
                   value={this.state.taskName}
                   onChange={this.handleChange}
+                />
+                <input
+                  value={this.state.taskDescription}
                 />
                 <button>Add</button>
               </form>
