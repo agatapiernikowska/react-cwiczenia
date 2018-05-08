@@ -14,7 +14,8 @@ import React, { Component } from 'react'
 
   handleChange = event => {
     this.setState({
-      taskName: event.target.value
+      //dynamic attribute name
+      [event.target.name]: event.target.value
     })
   }
 
@@ -29,12 +30,12 @@ import React, { Component } from 'react'
               <h1>Tasks</h1>
               <form onSubmit={this.handleSubmit}>
                 <input
-                  value={this.state.taskName}
+                  name="taskName"
                   onChange={this.handleChange}
                 />
                 <input
-                  value={this.state.taskDescription}
-                  onChange={this.handleTaskDescriptionChange}
+                  name="taskDescription"
+                  onChange={this.handleChange}
                 />
                 <button>Add</button>
               </form>
