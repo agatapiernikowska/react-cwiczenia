@@ -4,7 +4,19 @@ import React, { Component } from 'react'
 
   state = {
     taskName: 'zupa',
-    taskDescription: 'foo'
+    taskDescription: 'foo',
+    tasks: [
+      {
+        id: 1,
+        name: 'Be awesome',
+        description: 'Some words...'
+      },
+      {
+        id: 2,
+        name: 'Learn React',
+        description: 'Fast!'
+      }
+    ]
   }
 
   handleSubmit  = event => {
