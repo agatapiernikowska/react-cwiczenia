@@ -22,8 +22,17 @@ class TasksView extends Component {
   handleSubmit = event => {
     event.preventDefault()
     console.log(this.state.taskName, this.state.taskDescription)
-  }
 
+
+    this.setState({
+      tasks: this.state.tasks.concat({
+        id: this.state.tasks.length + 1,
+        name: this.state.taskName,
+        description: this.state.taskDescription
+      })
+    })
+
+  }
   handleChange = event => {
     this.setState({
       //dynamic attribute name
