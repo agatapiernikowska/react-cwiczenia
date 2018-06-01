@@ -32,6 +32,10 @@ class TasksView extends Component {
       })
     })
 
+    this.setState ({
+      taskName: '',
+      taskDescription: ''
+    })
   }
   handleChange = event => {
     this.setState({
