@@ -25,10 +25,7 @@ class TasksView extends Component {
 
     this.setState ({
       taskName: '',
-      taskDescription: ''
-    })
-
-    this.setState({
+      taskDescription: '',
       tasks: this.state.tasks.concat({
         id: Math.max(...this.state.tasks.map(task => task.id)) + 1,
         name: this.state.taskName,
