@@ -23,6 +23,10 @@ class TasksView extends Component {
     event.preventDefault()
     console.log(this.state.taskName, this.state.taskDescription)
 
+    this.setState ({
+      taskName: '',
+      taskDescription: ''
+    })
 
     this.setState({
       tasks: this.state.tasks.concat({
@@ -32,11 +36,8 @@ class TasksView extends Component {
       })
     })
 
-    this.setState ({
-      taskName: '',
-      taskDescription: ''
-    })
   }
+
   handleChange = event => {
     this.setState({
       //dynamic attribute name
